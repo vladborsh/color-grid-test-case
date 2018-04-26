@@ -1,4 +1,4 @@
-# Grid palete with drag and drop
+# Grid palette with drag and drop
 
 Drag colors onto a grid to fill a grid block with that color. Blend a new color with an existing color on the grid to create a new color tone. Save your grid to load it later.
 
