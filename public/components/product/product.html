@@ -1,1 +1,15 @@
-<div class="product">Product</div>
+<div class="holder" drop-on-me>
+  <input color-picker ng-model="vm.color" type="color"  drag-me id="drag_1" >
+</div>
+
+<div ng-repeat="row in vm.cellArr" style="height: 61px;">
+  <cell 
+    ng-repeat="cell in row" 
+    drop-on-me 
+    cell-color="cell.color"
+    cell-id="cell.id"
+    cell-active="cell.active"
+    cell-column="{{$index}}"
+    cell-row="{{$parent.$index}}"
+    class="holder"></cell>
+</div>

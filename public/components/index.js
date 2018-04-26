@@ -1,13 +1,13 @@
 /**
  * Components exporter
  */
-import Contact from './contact/contact';
 import Product from './product/product';
+import Cell from './cell/cell';
 import angular from 'angular';
 
 let componentsModule = angular.module('App.Components', [
- Contact ,
- Product ,
+  Product ,
+ Cell ,
 ]).name;
 
 export default componentsModule;

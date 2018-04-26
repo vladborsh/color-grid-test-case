@@ -49,11 +49,11 @@
     "yargs": "^9.0.1"
   },
   "scripts": {
-    "test"      : "karma start",
-    "webpack"   : "webpack --watch",
-    "serve"     : "gulp serve",
-    "deploy"    : "gulp deploy",
-    "component" : "gulp component"
+    "test": "karma start",
+    "webpack": "webpack --watch",
+    "serve": "gulp serve",
+    "deploy": "gulp deploy",
+    "component": "gulp component"
   },
   "repository": {
     "type": "git",

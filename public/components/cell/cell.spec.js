@@ -1,16 +1,16 @@
-import ContactModule from './contact';
-import ContactController from './contact.controller';
-import ContactComponent from './contact.component';
-import ContactTemplate from './contact.html';
+import CellModule from './cell';
+import CellController from './cell.controller';
+import CellComponent from './cell.component';
+import CellTemplate from './cell.html';
 
-describe('Contact', () => {
+describe('Cell', () => {
   let $rootScope, makeController;
 
-  beforeEach(window.module(ContactModule));
+  beforeEach(window.module(CellModule));
   beforeEach(inject((_$rootScope_) => {
     $rootScope = _$rootScope_;
     makeController = () => {
-      return new ContactController();
+      return new CellController();
     };
   }));
 
@@ -25,12 +25,12 @@ describe('Contact', () => {
   });
 
   describe('Component', () => {
-    let component = ContactComponent;
+    let component = CellComponent;
     it('includes the intended template', () => {
-      expect(component.template).toEqual(ContactTemplate);
+      expect(component.template).toEqual(CellTemplate);
     });
     it('invokes the right controller', () => {
-      expect(component.controller).toEqual(ContactController);
+      expect(component.controller).toEqual(CellController);
     });
   });
 });

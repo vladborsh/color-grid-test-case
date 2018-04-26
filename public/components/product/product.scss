@@ -4,3 +4,37 @@ $primaryColor:   #027ccd;
   font-weight: bold;
   color: $primaryColor;
 }
+
+.holder {
+  height: 60px;
+  width: 60px;
+  border: solid 1px #999;
+  display: inline-block;
+  background-color: white;
+}
+
+.box {
+  box-sizing: border-box;
+  height: 60px;
+  width: 60px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[type="color"] {
+  -webkit-appearance: none;
+  padding: 0;
+	border: none;
+	height: 50px;
+  width: 50px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}

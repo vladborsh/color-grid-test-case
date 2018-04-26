@@ -5,7 +5,8 @@ import './product.scss';
 let ProductComponent = {
   bindings: {},
   template,
-  controller
+  controller,
+  controllerAs: 'vm'
 }
 
 export default ProductComponent;
