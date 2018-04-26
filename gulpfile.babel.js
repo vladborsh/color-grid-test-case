@@ -48,27 +48,5 @@ gulp.task('component', () => {
 });
 
 
-gulp.task('deploy', () => {
-  const utilSrv = new UtilService( fs, jsforce, vfs, zip, log );
-  const deploySrv = new DeploymentService( fs, jsforce, utilSrv, log );
-  utilSrv.createFolderStructure()
-    .then( () => utilSrv.zipBundles() )
-    .then( () => utilSrv.zipNewPackage() )
-    .then( () => { 
-      if ( yargs.argv.username && yargs.argv.password ) {
-        return deploySrv.deploy( yargs.argv.username, yargs.argv.password, (yargs.argv.env || 'sb')) 
-      } else {
-        const config = ((yargs.argv.env || 'sb') == 'sb') ? deployConfigSb : deployConfigProd;
-        if ( config.username && config.password ) {
-          return deploySrv.deploy( config.username, config.password, (yargs.argv.env || 'sb')) 
-        } else {
-          return null;
-        }
-      }
-    })
-    .catch( log )
-});
-
-
 /* Run server on default */
 gulp.task('default', [ 'serve']);
