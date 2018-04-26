@@ -1,15 +1,59 @@
-<div class="holder" drop-on-me>
-  <input color-picker ng-model="vm.color" type="color"  drag-me id="drag_1" >
-</div>
+<main role="main" class="container">
+  <h1 class="mt-4 mb-2">Color grid Test Case</h1>
 
-<div ng-repeat="row in vm.cellArr" style="height: 61px;">
-  <cell 
-    ng-repeat="cell in row" 
-    drop-on-me 
-    cell-color="cell.color"
-    cell-id="cell.id"
-    cell-active="cell.active"
-    cell-column="{{$index}}"
-    cell-row="{{$parent.$index}}"
-    class="holder"></cell>
-</div>
+  <div class="row">
+    <div class="col-sm">  
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-sm"> 
+              <h5 class="card-title">Toolbar</h5>
+              <div class="row mt-1">
+                <div class="col-sm"> 
+                  <p>Click on the sqauares and select colors</p> 
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-sm">
+                  <div class="holder" ng-repeat="colorHolder in vm.palette track by $index">
+                    <input color-picker ng-model="colorHolder" type="color"  drag-me id="drag_{{$index}}" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm"> 
+              <palette-loader on-load="vm.loadGrid(payload)"></palette-loader>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-sm"> 
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Palette</h5>
+          <div class="row mt-3">
+            <div class="col-sm">
+              <div ng-repeat="row in vm.cellArr" style="height: 60px;">
+                <cell 
+                  ng-repeat="cell in row" 
+                  drop-on-me 
+                  cell-color="cell.color"
+                  cell-id="cell.id"
+                  cell-active="cell.active"
+                  cell-column="{{$index}}"
+                  cell-row="{{$parent.$index}}"
+                  class="holder"></cell>
+              </div>
+            </div>
+            <div class="col-sm">
+              <code>{{vm.gridJson}}</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

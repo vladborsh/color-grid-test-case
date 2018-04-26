@@ -10,7 +10,7 @@
     "angular-mocks": "^1.6.6",
     "angular-ui-bootstrap": "^2.5.0",
     "angular-ui-router": "^0.4.3",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^4.1.0",
     "font-awesome": "^4.7.0",
     "lodash": "^4.17.4",
     "spa-server": "^1.0.0"

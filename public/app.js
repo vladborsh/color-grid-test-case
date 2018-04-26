@@ -6,7 +6,8 @@ import uiRouter from 'angular-ui-router';
 import Components from './components';
 import Commons from './commons';
 import Directives from './directvives';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+//
 import AppComponent from './app.component';
 
 
