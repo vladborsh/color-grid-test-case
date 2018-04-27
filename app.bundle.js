@@ -52634,7 +52634,6 @@ var ProductController = function () {
   }, {
     key: 'onDropColor',
     value: function onDropColor(target, data) {
-      console.log(this);
       this.cellArr[data.row][data.col].color = data.color;
       this.cellArr[data.row][data.col].id = data.id;
       var copy = _angular2.default.copy(this.cellArr);
@@ -52648,7 +52647,6 @@ var ProductController = function () {
     value: function loadGrid(payload) {
       var _this2 = this;
 
-      console.log(this.cellArr);
       payload = JSON.parse(payload);
       payload.forEach(function (row, i) {
         row.forEach(function (cell, j) {
@@ -53038,7 +53036,6 @@ var CellController = function () {
   }, {
     key: '$onChanges',
     value: function $onChanges() {
-      console.log(this.cellColor, this.cellActive, this.activated);
       if (!this.initialChanges) {
         if (this.cellActive) {
           if (!this.activated) {
