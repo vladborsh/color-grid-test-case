@@ -14,7 +14,6 @@ class CellController {
   $onInit() {}
 
   $onChanges() {
-    console.log(this.cellColor, this.cellActive, this.activated)
     if (!this.initialChanges) {
       if ( this.cellActive ) {
         if ( !this.activated ) {
