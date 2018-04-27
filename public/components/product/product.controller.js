@@ -34,7 +34,6 @@ class ProductController {
   }
 
   onDropColor(target, data) {
-    console.log(this)
     this.cellArr[data.row][data.col].color = data.color;
     this.cellArr[data.row][data.col].id = data.id;
     let copy = angular.copy(this.cellArr);
@@ -45,7 +44,6 @@ class ProductController {
   }
   
   loadGrid(payload) {
-    console.log(this.cellArr)
     payload = JSON.parse(payload)
     payload.forEach((row, i) => {
       row.forEach((cell,j) => {
