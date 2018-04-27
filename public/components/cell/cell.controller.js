@@ -14,7 +14,6 @@ class CellController {
   $onInit() {}
 
   $onChanges() {
-    console.log(this.cellColor, this.cellActive, this.activated)
     if (!this.initialChanges) {
       if ( this.cellActive ) {
         if ( !this.activated ) {
@@ -26,7 +25,6 @@ class CellController {
       } else {
         if (this.cellColor == '#fff' && this.activated) {
           var el = angular.element(angular.element(angular.element(this._element[0]).children()[1])[0]);
-          console.log('here', el)
           el.remove()
           return;
         }
